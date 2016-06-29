@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+        <div class="col-md-3">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="{% url "aboutus" %}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="{% url "aboutus" %}" role="button">View details &raquo;</a></p>
+       </div>
+
+        <div class="col-md-3">
+          <h2>PayPal Payment</h2>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+
+        <input type="hidden" name="on0" value="Make your choice">Make your choice</br>
+            <select class="form-control" name="os0">
+
+            <option value="Basic">Basic $50.00 USD</option>
+            <option value="Standard">Standard $150.00 USD</option>
+            <option value="Premium">Premium $200.00 USD</option>
+        </select>
+        </br>
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+        ">
+        <input type="submit" class="btn btn-primary btn-lg" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        </div>
+
+
+        <div class="col-md-3">
+          <h2>Heading</h2>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Make your choice">Make your choice</td></tr><tr><td><select name="os0">
+                <option value="Basic">Basic $50.00 USD</option>
+                <option value="Standard">Standard $150.00 USD</option>
+                <option value="Premium">Premium $200.00 USD</option>
+            </select> </td></tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+            ">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+       </div>
+
+
+
+
+{% endblock %}
